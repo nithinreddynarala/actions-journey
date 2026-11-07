@@ -1,0 +1,10 @@
+name: rv
+on: 
+  push:
+jobs:
+  rv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: rv
+        run: echo "${{ vars.DEPLOY_REGION }}"
+
