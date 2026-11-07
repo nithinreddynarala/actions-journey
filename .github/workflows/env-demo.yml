@@ -1,0 +1,22 @@
+name: envs
+on:
+  push:
+env:
+  APP_NAME: journey
+jobs:
+  envs-job:
+    runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: info
+    steps:
+      - name: envs-step-1
+        run: |
+          echo "$APP_NAME"
+          echo "$LOG_LEVEL"
+      - name: envs-step-2
+        env:
+          LOG_LEVEL: debug
+        run: |
+          echo "$APP_NAME"
+          echo "$LOG_LEVEL"
+
