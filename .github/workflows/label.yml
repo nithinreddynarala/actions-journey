@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: format-step
-        run: ${{ format('build-{0}-{1}',github.run_number,github.ref_name) }}
+        run: echo "${{ format('build-{0}-{1}',github.run_number,github.ref_name) }}"
