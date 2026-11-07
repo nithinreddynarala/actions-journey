@@ -1,0 +1,9 @@
+name: format-workflow
+on:
+  push:
+jobs:
+  format-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: format-step
+        run: ${{ format('build-{0}-{1}',github.run_number,github.ref_name) }}
