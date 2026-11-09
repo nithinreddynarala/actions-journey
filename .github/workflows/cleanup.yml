@@ -9,6 +9,6 @@ jobs:
         run: echo "starting"
       - name: Flaky check
         run: ls abcd
-      - name: Stop the database
+      - name: Stop test database
         if: always()
         run: echo "stopping"
