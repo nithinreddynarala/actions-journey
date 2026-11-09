@@ -1,0 +1,13 @@
+name: example
+on:
+  push:
+jobs:
+  examplesss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "hello"
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: echo "running deploy"
+
