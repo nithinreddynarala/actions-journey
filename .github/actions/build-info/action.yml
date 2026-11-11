@@ -1,0 +1,9 @@
+name: comp
+description: prints branch and commit
+runs:
+  using: composite
+  steps:
+    - run: echo "$GITHUB_REF_NAME"
+      shell: bash
+    - run: echo "$GITHUB_SHA"
+      shell: bash
