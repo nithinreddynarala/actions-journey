@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses : ./.github/actions/announce/action.ymlc
+      - uses : ./.github/actions/announce/action.yml
         with:
           app-name: pixelpost
